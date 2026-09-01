@@ -6,11 +6,11 @@
 --------------------------------*/
 
 :root {
-    --primary-color: #123d5a;
-    --secondary-color: #0d2f46;
+    --primary-color: hsl(146, 82%, 9%);
+    --secondary-color: hsl(146, 52%, 18%);
     --background-color: #ffffff;
-    --text-color: #222222;
-    --link-color: #273f91;
+    --text-color: hsl(146, 0%, 13%);
+    --link-color: hsl(146, 52%, 30%);
 
     --heading-font: "Montserrat", sans-serif;
     --body-font: "Roboto", sans-serif;
