@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap');
+
+
+/* ------------------------------
+   Variables
+--------------------------------*/
+
+:root {
+    --primary-color: #123d5a;
+    --secondary-color: #0d2f46;
+    --background-color: #ffffff;
+    --text-color: #222222;
+    --link-color: #273f91;
+
+    --heading-font: "Montserrat", sans-serif;
+    --body-font: "Roboto", sans-serif;
+}
+
+
+/* ------------------------------
+   General
+--------------------------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+
+/* ------------------------------
+   Header
+--------------------------------*/
+
+header {
+    width: 92%;
+    max-width: 1100px;
+    margin: 25px auto 0;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+
+/* The assignment specifically asks
+   for the span to be display:block */
+
+#course-title {
+    display: block;
+    text-align: center;
+    padding: 18px;
+
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+
+/* ------------------------------
+   Navigation
+--------------------------------*/
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: var(--secondary-color);
+}
+
+nav a {
+    flex: 1;
+
+    padding: 14px 10px;
+
+    text-align: center;
+
+    color: white;
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+
+/* Hover effect */
+
+nav a:hover,
+nav a:focus {
+    background-color: white;
+    color: var(--secondary-color);
+}
+
+
+/* ------------------------------
+   Main
+--------------------------------*/
+
+main {
+    width: 92%;
+    max-width: 1100px;
+
+    margin: 25px auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+
+    text-align: center;
+
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+
+/* ------------------------------
+   Cards
+--------------------------------*/
+
+.card-container {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #aaa;
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    background-color: white;
+}
+
+
+/* Card headings */
+
+.card h2 {
+    margin: 0;
+
+    padding: 9px;
+
+    text-align: center;
+
+    background-color: var(--primary-color);
+    color: white;
+
+    font-family: var(--heading-font);
+    font-size: 1rem;
+}
+
+
+/* ------------------------------
+   About Me
+--------------------------------*/
+
+.about-me {
+    display: grid;
+
+    grid-template-columns: 1fr 120px;
+
+    gap: 20px;
+
+    align-items: center;
+
+    padding: 20px;
+}
+
+.about-me p {
+    margin: 0;
+}
+
+.about-me img {
+    width: 120px;
+    height: 150px;
+
+    object-fit: cover;
+
+    border: 1px solid #ccc;
+}
+
+
+/* ------------------------------
+   Location
+--------------------------------*/
+
+.location {
+    padding: 0 20px 20px;
+}
+
+.location h3 {
+    max-width: 450px;
+
+    margin: 10px auto 15px;
+
+    padding-bottom: 5px;
+
+    text-align: center;
+
+    border-bottom: 2px solid #ddd;
+
+    font-family: var(--heading-font);
+    font-size: 1rem;
+}
+
+
+.location-content {
+    display: grid;
+
+    grid-template-columns: 130px 1fr;
+
+    gap: 20px;
+
+    align-items: center;
+}
+
+.location-content img {
+    width: 120px;
+    height: 75px;
+
+    object-fit: cover;
+
+    border: 1px solid #aaa;
+}
+
+.location-content p {
+    margin: 0;
+}
+
+.caption {
+    margin-top: 5px !important;
+
+    text-align: center;
+
+    font-size: 0.75rem;
+}
+
+
+/* ------------------------------
+   Resources
+--------------------------------*/
+
+.resources {
+    min-height: 350px;
+}
+
+.resources ul {
+    margin-top: 55px;
+
+    padding-left: 45px;
+}
+
+.resources li {
+    margin-bottom: 8px;
+}
+
+.resources a {
+    color: var(--link-color);
+}
+
+.resources a:hover {
+    color: black;
+}
+
+
+/* ------------------------------
+   Footer
+--------------------------------*/
+
+footer {
+    width: 92%;
+    max-width: 1100px;
+
+    margin: 25px auto;
+
+    padding: 15px;
+
+    text-align: center;
+
+    background-color: var(--primary-color);
+
+    color: white;
+}
+
+footer p {
+    margin: 4px;
+
+    font-size: 0.85rem;
+}
+
+.flower {
+    margin: 0 5px;
+}
+
+
+/* ------------------------------
+   Responsive Design
+--------------------------------*/
+
+@media (max-width: 700px) {
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+    }
+
+    .about-me {
+        grid-template-columns: 1fr;
+    }
+
+    .about-me img {
+        justify-self: center;
+    }
+
+    .location-content {
+        grid-template-columns: 1fr;
+    }
+
+    .location-content > div {
+        text-align: center;
+    }
+
+    .resources ul {
+        margin-top: 20px;
+    }
+}
