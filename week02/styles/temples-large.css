@@ -1,0 +1,62 @@
+@media screen and (min-width: 700px) {
+
+    /* HEADER */
+
+    .header-container {
+        flex-wrap: nowrap;
+    }
+
+    .site-title {
+        font-size: 2rem;
+    }
+
+    /* HIDE HAMBURGER */
+
+    #menu-button {
+        display: none;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        padding: 0.7rem 1rem;
+    }
+
+    /* MAIN */
+
+    main {
+        padding: 3rem 2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    /* TEMPLE GRID */
+
+    .temple-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+
+@media screen and (min-width: 1000px) {
+
+    .temple-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    figure img {
+        height: 220px;
+        object-fit: cover;
+    }
+}
