@@ -1,3 +1,4 @@
+
 const menuButton = document.querySelector("#menu-button");
 const navigation = document.querySelector("#navigation");
 
@@ -24,4 +25,3 @@ const lastModified = document.lastModified;
 document.querySelector("#lastModified").textContent =
     Last Modified: ${lastModified};
 
-    
