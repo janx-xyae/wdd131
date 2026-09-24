@@ -72,15 +72,15 @@ const temples = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Elementos del DOM
+    
     const container = document.getElementById("temple-cards");
     const galleryTitle = document.getElementById("gallery-title");
     
-    // Footer Dinámico
+    
     document.getElementById("current-year").textContent = new Date().getFullYear();
     document.getElementById("last-modified").textContent = document.lastModified;
 
-    // Función para renderizar tarjetas
+    
     function displayTemples(filteredTemples) {
         container.innerHTML = "";
         filteredTemples.forEach(temple => {
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Inicializar mostrando todos los templos
+    
     displayTemples(temples);
 
 
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Event Listeners para Filtros
+    
     document.getElementById("nav-home").addEventListener("click", (e) => {
         e.preventDefault();
         galleryTitle.textContent = "Home";
