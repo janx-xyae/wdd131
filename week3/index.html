@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Information about Mexico, including its geography, culture, and weather.">
+    <meta name="author" content="Hannah Ramirez">
+    <title>Mexico | WDD 131</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/place.css">
+
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Mexico</h1>
+    </header>
+
+    <main>
+        <section class="hero">
+            <picture>
+                <source media="(max-width: 700px)" srcset="images/mexico-small.webp">
+                <img src="images/mexico.webp" alt="Landscape of Mexico">
+            </picture>
+        </section>
+
+        <section class="information">
+
+            <div class="card data">
+                <h2>Data</h2>
+
+                <p><span>Area:</span> 1,964,375 km²</p>
+                <p><span>Population:</span> Approximately 130 million</p>
+                <p><span>Capital:</span> Mexico City</p>
+                <p><span>Languages:</span> Spanish and Indigenous languages</p>
+                <p><span>Currency:</span> Mexican Peso</p>
+                <p><span>Time Zone:</span> Multiple time zones</p>
+            </div>
+
+            <div class="card weather">
+                <h2>Weather</h2>
+
+                <div class="weather-icon-mobile">⛅</div>
+
+                <p><span>Temperature:</span> 24 °C</p>
+                <p><span>Conditions:</span> Partly Cloudy</p>
+                <p><span>Wind:</span> 12 km/h</p>
+                <p><span>Wind Chill:</span> 24 °C</p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span>2026 | Hannah Ramirez | Mexico</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>

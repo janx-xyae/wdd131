@@ -1,0 +1,127 @@
+
+:root {
+    --primary-color: #006847;
+    --secondary-color: #ce1126;
+    --accent-color: #f5f5f5;
+    --text-color: #222222;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--accent-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    border-bottom: 6px solid var(--secondary-color);
+}
+
+header h1 {
+    padding: 1.5rem;
+    font-size: 1.8rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #004d35;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 1rem 2rem;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+}
+
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--white);
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+}
+
+.card p,
+.card ul {
+    padding: 1.5rem;
+}
+
+.card ul {
+    list-style-position: inside;
+}
+
+.card li {
+    margin: 1rem 0;
+}
+
+.card a {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 6px solid var(--secondary-color);
+}
+
+footer p {
+    margin: 0.4rem;
+}
+
+
+/* Mobile view */
+@media screen and (max-width: 700px) {
+
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        text-align: center;
+        padding: 0.8rem;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        margin: 1rem auto;
+    }
+}

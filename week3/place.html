@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Axolotl - Mexico's Wonder</title>
+    <meta name="description" content="WDD 131 Week 03 assignment showcasing the Mexican Axolotl layout, responsive design, and weather metrics.">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>The Mexican Axolotl</h1>
+    </header>
+
+    <main>
+    <!-- Hero Section using Responsive Images (Rutas corregidas) -->
+    <div class="hero">
+        <picture>
+            <source srcset="images/mexico-large.webp" media="(min-width: 768px)">
+            <img src="images/mexico-small.webp" alt="Mexican Axolotl swimming under water" loading="lazy">
+        </picture>
+    </div>
+
+    <!-- Data Section tailored to the Axolotl -->
+    <section class="data-box">
+        <h2>Axolotl Data</h2>
+        <ul>
+            <li><strong>Scientific Name:</strong> Ambystoma mexicanum</li>
+            <li><strong>Native Habitat:</strong> Lake Xochimilco</li>
+            <li><strong>Conservation Status:</strong> Critically Endangered</li>
+            <li><strong>Average Lifespan:</strong> 10 - 15 years</li>
+            <li><strong>Unique Ability:</strong> Full Limb Regeneration</li>
+        </ul>
+    </section>
+
+    <!-- Weather Section (Modificado con un emoji en vez del archivo .svg) -->
+    <section class="weather-box">
+        <h2>Xochimilco Weather</h2>
+        <!-- Usamos un emoji nativo dentro de un span para la vista móvil en lugar de la etiqueta img -->
+        <span class="weather-icon-mobile">⛅</span>
+        
+        <ul>
+            <li><strong>Temperature:</strong> <span id="temp">9</span>°C</li>
+            <li><strong>Condition:</strong> Misty & Cool</li>
+            <li><strong>Wind:</strong> <span id="wind">6.5</span> km/h</li>
+            <li><strong>Wind Chill:</strong> <span id="windchill"></span></li>
+        </ul>
+    </section>
+</main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Hannah Ramirez | Mexico </p>
+        <p class="last-modified">Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
