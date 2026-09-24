@@ -1,20 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Footer Dates setup
-    document.getElementById("currentyear").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = document.lastModified;
+    const yearSpan = document.getElementById("current-year");
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
 
-    // 2. Wind Chill Logic
-    const temp = parseFloat(document.getElementById("temp").textContent);
-    const wind = parseFloat(document.getElementById("wind").textContent);
-    const windChillElement = document.getElementById("windchill");
+    const modifiedSpan = document.getElementById("last-modified");
+    if (modifiedSpan) {
+        modifiedSpan.textContent = document.lastModified;
+    }
 
-    // Single-line formula function requirement
-    const calculateWindChill = (t, s) => (13.12 + (0.6215 * t) - (11.37 * Math.pow(s, 0.16)) + (0.3965 * t * Math.pow(s, 0.16))).toFixed(1);
+    const temperatureInput = 18;
+    const windSpeedInput = 8.5;
 
-    // Condition check for Metric unit calculations (t <= 10 °C and s > 4.8 km/h)
-    if (temp <= 10 && wind > 4.8) {
-        windChillElement.textContent = `${calculateWindChill(temp, wind)} °C`;
-    } else {
-        windChillElement.textContent = "N/A";
+    function calculateWindChill(tempCelsius, speedKmH) {
+        if (tempCelsius <= 10 && speedKmH > 4.8) {
+            const windChillCelsius = 13.12 + (0.6215 * tempCelsius) - (11.37 * Math.pow(speedKmH, 0.16)) + (0.3965 * tempCelsius * Math.pow(speedKmH, 0.16));
+            return `${Math.round(windChillCelsius)}°C`;
+        }
+        return "N/A";
+    }
+
+    const windChillDisplay = document.getElementById("wind-chill-value");
+    if (windChillDisplay) {
+        windChillDisplay.textContent = calculateWindChill(temperatureInput, windSpeedInput);
     }
 });
