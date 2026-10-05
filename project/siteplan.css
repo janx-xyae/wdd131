@@ -1,12 +1,10 @@
-/* ----------------------------------------------------
-   GLOBAL CSS VARIABLES & RESET
----------------------------------------------------- */
+
 :root {
-    --primary-color: #1e4620;       /* Forest Green */
-    --accent-color: #d97706;        /* Amber / Gold */
-    --bg-color: #fef3c7;            /* Warm Cream */
-    --card-bg: #ffffff;             /* Pure White for readability */
-    --text-color: #1f2937;          /* Dark Charcoal */
+    --primary-color: #1e4620;       
+    --accent-color: #d97706;        
+    --bg-color: #fef3c7;            
+    --card-bg: #ffffff;             
+    --text-color: #1f2937;          
     --heading-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --body-font: Georgia, serif;
 }
@@ -25,9 +23,7 @@ body {
     padding: 20px;
 }
 
-/* ----------------------------------------------------
-   LAYOUT CONTAINERS & TYPOGRAPHY
----------------------------------------------------- */
+
 header {
     background-color: var(--primary-color);
     color: #ffffff;
@@ -94,9 +90,7 @@ code {
     font-size: 0.95rem;
 }
 
-/* ----------------------------------------------------
-   WIREFRAMES SECTION STYLING
----------------------------------------------------- */
+
 .wireframe-placeholder {
     background-color: #f9fafb;
     border: 2px dashed #cbd5e1;
@@ -121,9 +115,7 @@ code {
     margin-bottom: 0.5rem;
 }
 
-/* ----------------------------------------------------
-   FOOTER STYLING
----------------------------------------------------- */
+
 footer {
     text-align: center;
     margin-top: 3rem;
