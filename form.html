@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta author="Hannah Ramirez">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+        <p>Please share your feedback with us regarding our products.</p>
+    </header>
+
+    <main>
+        <form action="review.html" method="get" class="review-form">
+            
+            
+            <div class="form-group">
+                <label for="product-name">Product Name <span class="required">*</span></label>
+                <select id="product-name" name="product-name" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                    
+                </select>
+            </div>
+
+            
+            <div class="form-group">
+                <label class="group-label">Overall Rating <span class="required">*</span></label>
+                <div class="rating-container">
+                    <label class="star-label"><input type="radio" name="rating" id="rate-1" value="1" required> 1 ★</label>
+                    <label class="star-label"><input type="radio" name="rating" id="rate-2" value="2" required> 2 ★</label>
+                    <label class="star-label"><input type="radio" name="rating" id="rate-3" value="3" required> 3 ★</label>
+                    <label class="star-label"><input type="radio" name="rating" id="rate-4" value="4" required> 4 ★</label>
+                    <label class="star-label"><input type="radio" name="rating" id="rate-5" value="5" required> 5 ★</label>
+                </div>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="install-date">Date of Installation <span class="required">*</span></label>
+                <input type="type" type="date" id="install-date" name="install-date" required>
+            </div>
+
+           
+            <div class="form-group">
+                <label class="group-label">Useful Features (Check all that apply)</label>
+                <div class="checkbox-container">
+                    <label><input type="checkbox" name="features" id="feat-durability" value="durability"> Durability</label>
+                    <label><input type="checkbox" name="features" id="feat-ease" value="ease-of-use"> Ease of Use</label>
+                    <label><input type="checkbox" name="features" id="feat-performance" value="performance"> Performance</label>
+                    <label><input type="checkbox" name="features" id="feat-design" value="design"> Design</label>
+                </div>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="written-review">Written Review (Optional)</label>
+                <textarea id="written-review" name="written-review" rows="5" placeholder="Write your experience here..."></textarea>
+            </div>
+
+        
+            <div class="form-group">
+                <label for="user-name">Your Name (Optional)</label>
+                <input type="text" id="user-name" name="user-name" placeholder="e.g. John Doe">
+            </div>
+
+            
+            <button type="submit" class="submit-btn">Submit Review</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> | Hannah Ramirez | Product Review Project | Last Modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>
