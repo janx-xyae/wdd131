@@ -1,6 +1,6 @@
 
 :root {
-    --primary-color: #1e4620;       
+    --primary-color: #3aa03f;       
     --accent-color: #d97706;        
     --bg-color: #fef3c7;            
     --card-bg: #ffffff;             
@@ -8,6 +8,7 @@
     --heading-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --body-font: Georgia, serif;
 }
+
 
 * {
     margin: 0;
